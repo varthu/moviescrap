@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<div class="form">
+		<form action="/movie_details" method="POST">
+        {% csrf_token %}
+        <input type="text" class="form-control" name="movie_name" placeholder="movie_name *" value="">      
+        <input type="submit">
+        </form>
+    </div>
+    {% if error %}
+        <script>
+            alert("{{error | safe }}")
+        </script>
+    {% endif %}
+</body>
+</html>
