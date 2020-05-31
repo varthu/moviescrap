@@ -14,9 +14,10 @@ class movie_details(models.Model):
 
 
 class soundtrack(models.Model):
-    soundtrack_id = models.IntegerField()
+    movie_id = models.IntegerField(null=True)
+    soundtrack_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=80)
-    singer = models.CharField(max_length=250)
+    singer = models.CharField(max_length=500)
     length = models.CharField(max_length=70)
 
 
